@@ -15,16 +15,16 @@
 	</header>
 
 	<form action="#" method="post"
-		th:action="@{/studenti/aggiungistudente}" th:object="${studente}">
+		th:action="@{/web/aggiungistudente}" th:object="${studente}">
 		<table>
 			<thead>
 				<tr>
 
 
-					<th>Matricola</th>
+<!-- 					<th>Matricola</th> -->
 					<th>Nome</th>
 					<th>Cognome</th>
-					<th>Data di nascita</th>
+<!-- 					<th>Data di nascita</th> -->
 					<th>Email</th>
 					<th>Indirizzo</th>
 					<th>Citta'</th>
@@ -35,21 +35,21 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td><input type="text" th:field="*{matricola}" id="matricola" required="required"></td>
+<!-- 					<td><input type="text" th:field="*{matricola}" id="matricola" required="required"></td> -->
 					<td><input type="text" th:field="*{nome}" id="nome" required="required"></td>
 					<td><input type="text" th:field="*{cognome}" id="cognome" required="required"></td>
-					<td><input type="date" pattern="yyyy-MM-dd"
-						th:field="*{dataNascita}" id="dataNascita" required="required"></td>
+<!-- 					<td><input type="date" pattern="yyyy-MM-dd" -->
+<!-- 						th:field="*{dataNascita}" id="dataNascita" required="required"></td> -->
 					<td><input type="email" th:field="*{email}" id="email" required="required"></td>
 					<td><input type="text" th:field="*{indirizzo}" id="indirizzo" required="required"></td>
 					<td><input type="text" th:field="*{citta}" id="citta" required="required"></td>
 
 					
 						<td>
-							<select th:field="*{corsoLaurea}">
+							<select th:field="*{corsoDiLaurea}">
 							
 								<div th:each="c : ${corsi}">
-									<option th:text="${c.nome}" th:value="${c.codice}"></option>
+									<option th:text="${c.nome}" th:value="${c.id}"></option>
 								</div>
 							
 							

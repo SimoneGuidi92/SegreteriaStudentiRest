@@ -18,15 +18,13 @@
 
 			<tr>
 
-				<th>Matricola</th>
+				<th>Id</th>
 				<th>Nome</th>
 				<th>Cognome</th>
-				<th>Data di nascita</th>
-				<th>Email</th>
 				<th>Indirizzo</th>
 				<th>Citta'</th>
-				<th>Codice corso</th>
-				<th>Nome corso</th>
+				<th>Email</th>
+				<th>Corso di laurea</th>
 
 
 			</tr>
@@ -37,15 +35,13 @@
 		<tbody>
 			<tr>
 
+				<td th:text="${s.id}"></td>
 				<td th:text="${s.nome}"></td>
-<!-- 				<td th:text="${s.getNome()}"></td> -->
-<!-- 				<td th:text="${s.getCognome()}"></td> -->
-<!-- 				<td th:text="${s.getDataNascita()}"></td> -->
-<!-- 				<td th:text="${s.getEmail()}"></td> -->
-<!-- 				<td th:text="${s.getIndirizzo()}"></td> -->
-<!-- 				<td th:text="${s.getCitta()}"></td> -->
-<!-- 				<td th:text="${s.getCorsoLaurea.getCodice()}"></td> -->
-<!-- 				<td th:text="${s.getCorsoLaurea.getNome()}"></td> -->
+				<td th:text="${s.cognome}"></td>
+				<td th:text="${s.indirizzo}"></td>
+				<td th:text="${s.citta}"></td>
+				<td th:text="${s.email}"></td>
+				<td th:text="${s.corsoDiLaurea.nome}"></td>
 <!-- 				<td><a th:href="@{/studenti/formaggiornastudente/{matricola}(matricola=${s.getMatricola()})}">Aggiorna</a></td> -->
 <!-- 				<td><a th:href="@{/studenti/eliminastudente/{matricola}(matricola=${s.getMatricola()})}" onclick="return confirm('Sei sicuro di voler eliminare questo elemento?')">Elimina</a></td> -->
 
