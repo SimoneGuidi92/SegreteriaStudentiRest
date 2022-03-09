@@ -66,7 +66,7 @@ public class StudenteControllerWeb {
 		
 		if(tempStudente.isPresent()) {
 			ModelAndView view = new ModelAndView("aggiornaStudente");
-			view.addObject("studente", tempStudente);
+			view.addObject("studente", tempStudente.get());
 			view.addObject("corsi", corsoDiLaureaService.findAll());
 			return view;
 		}
@@ -74,5 +74,7 @@ public class StudenteControllerWeb {
 			return new ModelAndView("error").addObject("message", "Id non trovato");
 		}
 	}
+	
+	
 	
 }

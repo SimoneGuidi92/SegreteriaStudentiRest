@@ -32,4 +32,10 @@ public class Studente {
 	@OneToOne(mappedBy = "studente")
 	private Libretto libretto;
 
+	@Override
+	public String toString() {
+		return "Studente [id=" + id + ", nome=" + nome + ", cognome=" + cognome + ", indirizzo=" + indirizzo
+				+ ", citta=" + citta + ", email=" + email + "]";
+	}
+
 }
