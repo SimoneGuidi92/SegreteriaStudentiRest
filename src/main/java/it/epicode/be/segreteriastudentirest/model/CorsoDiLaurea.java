@@ -2,7 +2,6 @@ package it.epicode.be.segreteriastudentirest.model;
 
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -29,7 +28,7 @@ public class CorsoDiLaurea {
 	private String nome;
 	private String indirizzo;
 
-	@OneToMany(mappedBy = "corsoDiLaurea", cascade = {CascadeType.PERSIST,CascadeType.MERGE})
+	@OneToMany(mappedBy = "corsoDiLaurea")
 	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 	private List<Studente> studenti;
 	
