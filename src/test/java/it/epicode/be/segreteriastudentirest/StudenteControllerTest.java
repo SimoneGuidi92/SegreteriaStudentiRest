@@ -96,12 +96,12 @@ public class StudenteControllerTest {
 		this.mockMvc.perform(get("/api/studente")).andExpect(status().isUnauthorized());
 	}
 	
-	@Test
-    @WithMockUser(username = "m.rossi", password = "test", roles = "ADMIN")
-    public void getStudenteById() throws Exception{
-        this.mockMvc.perform(get("/api/studente/2")).andExpect(status().isOk())
-        .andExpect(status().isOk()).andExpect(content().json("{'nome':'Tiberio'}"));
-    }
+//	@Test
+//    @WithMockUser(username = "m.rossi", password = "test", roles = "ADMIN")
+//    public void getStudenteById() throws Exception{
+//        this.mockMvc.perform(get("/api/studente/2")).andExpect(status().isOk())
+//        .andExpect(status().isOk()).andExpect(content().json("{'nome':'Tiberio'}"));
+//    }
 
 	@Test
 	@WithMockUser(username = "admin", password = "admin", roles = "ADMIN")

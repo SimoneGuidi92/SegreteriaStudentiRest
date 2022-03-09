@@ -1,5 +1,6 @@
 package it.epicode.be.segreteriastudentirest.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +20,11 @@ public class StudenteService {
 
 	public Page<Studente> findAll(Pageable pageable) {
 		return studenteRepository.findAll(pageable);
+
+	}
+	
+	public List<Studente> findAll() {
+		return studenteRepository.findAll();
 
 	}
 
