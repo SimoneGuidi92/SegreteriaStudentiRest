@@ -38,4 +38,10 @@ public class CorsoDiLaurea {
 				inverseJoinColumns = @JoinColumn(name = "docente_id"))
 	private List<Docente> docenti;
 
+	@Override
+	public String toString() {
+		return "CorsoDiLaurea [id=" + id + ", codice=" + codice + ", numeroEsami=" + numeroEsami + ", nome=" + nome
+				+ ", indirizzo=" + indirizzo + "]";
+	}
+
 }
