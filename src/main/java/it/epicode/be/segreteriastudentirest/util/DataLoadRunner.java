@@ -39,7 +39,7 @@ public class DataLoadRunner implements CommandLineRunner {
 		Docente docente = new Docente();
 		List<Docente> docenti = new ArrayList<>();
 		
-		docente.setCognome("Daniele");
+		docente.setCognome("Johnny");
 		docente.setNome("String");
 		
 		
