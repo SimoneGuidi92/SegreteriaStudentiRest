@@ -10,7 +10,11 @@ import it.epicode.be.segreteriastudentirest.model.Studente;
 
 public interface StudenteRepository extends JpaRepository<Studente, Long>{
 
-	Page<Studente> findByCorsoDiLaureaId(Long id, Pageable pageable);	// Prendiamo come 
+	Page<Studente> findByCorsoDiLaureaId(Long id, Pageable pageable);	// Prendiamo come
+	
+	
+	
 	Optional<Studente> findByLibrettoId(Long id);
+	
 	
 }
