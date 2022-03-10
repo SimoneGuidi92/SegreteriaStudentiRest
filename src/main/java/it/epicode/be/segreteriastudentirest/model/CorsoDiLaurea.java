@@ -33,6 +33,7 @@ public class CorsoDiLaurea {
 	private List<Studente> studenti;
 	
 	@ManyToMany
+	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 	@JoinTable(name = "docenti_corsi",
 				joinColumns = @JoinColumn(name = "corso_id"),
 				inverseJoinColumns = @JoinColumn(name = "docente_id"))
